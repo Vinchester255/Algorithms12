@@ -88,7 +88,7 @@ int main() {
     
     for(int i = 0; i < CT; ++i){
     	tree[i] = NULL;
-    	tree[i] = addNode(tree[i], rand()%100);
+    	tree[i] = addNode(tree[i], rand()%10);
     	for(int node = 1; node < 10000; ++node){
     		addNode(tree[i], rand()%100);
 		}
@@ -97,10 +97,10 @@ int main() {
 	double prcnt = 0.0;
 	for(int i = 0; i < CT; ++i){
 		if(checkBalanceTree(tree[i])){
-			prcnt = prcnt + 1.0;
+			prcnt = prcnt + 1;
 		}
 	}
-	prcnt = (prcnt/CT)*100.0;
+	prcnt = (prcnt/CT)*100;
 	printf("Out of %d trees %d%% are balanced \n", CT, (int)prcnt);
 	
 	
